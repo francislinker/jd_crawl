@@ -1,0 +1,20 @@
+网址：https://www.jd.com/
+
+目标：输入搜索商品，抓取数据如下：
+
+商品名称：
+商品价格：
+评论数量：
+商家名称：
+
+准备工作：
+    1.搜索框属性：class -> text
+    2.搜索按钮属性值 class ->button
+    3.下一页
+        能点击：class -> pn-next
+        不能点击：class -> pn-next disabled
+    4.页面商品信息xpath表达式
+        //div[@id="J_goodsList"]/ul/li
+               with open('京东爬虫数据.csv','a',newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow([price,name,comment,shop])
